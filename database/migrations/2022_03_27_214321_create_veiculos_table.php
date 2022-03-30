@@ -28,7 +28,7 @@ class CreateVeiculosTable extends Migration
             $table->boolean('tracao')->default(true);
             $table->string('categoria');
             $table->date('dt_inclusao');
-            $table->date('dt_saida')->nullable;
+            $table->date('dt_saida')->nullable();
             $table->timestamps();
         });
     }

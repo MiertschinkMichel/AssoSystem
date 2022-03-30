@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h2>Listagem de Associados</h2>
+            <h2>Associados</h2>
             <table class="table table-hover">
                 <thead>
                     <tr class="">

@@ -17,7 +17,7 @@ class BancoController extends Controller
     public function index()
     {
         $bancos = Banco::all();
-        return \view('bancos.index');
+        return \view('bancos.index', \compact('bancos'));
     }
 
     /**
@@ -39,11 +39,10 @@ class BancoController extends Controller
     public function store(StoreBancoRequest $request)
     {
         $this->validate($request, [
-            'cod_febreban' => 'required',
+            'cod_febraban' => 'required',
             'cod_agencia' => 'required',
-            'conta' => 'required',
+            'conta' => 'required'
         ]);
-        
 
         Banco::create($request->all());
         return redirect()->route('bancos.index');
@@ -68,7 +67,7 @@ class BancoController extends Controller
      */
     public function edit(Banco $banco)
     {
-        //
+        return \view ('bancos.edit', \compact('banco'));
     }
 
     /**
@@ -80,7 +79,14 @@ class BancoController extends Controller
      */
     public function update(UpdateBancoRequest $request, Banco $banco)
     {
-        //
+        $this->validate($request, [
+            'cod_febraban' => 'required',
+            'cod_agencia' => 'required',
+            'conta' => 'required'
+        ]);
+
+        $banco->update($request->all());
+        return redirect()->route('bancos.index');
     }
 
     /**

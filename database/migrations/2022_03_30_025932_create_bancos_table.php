@@ -17,7 +17,7 @@ class CreateBancosTable extends Migration
             $table->id();
             $table->double('cod_febraban');
             $table->double('cod_agencia');
-            $table->double('conta');
+            $table->string('conta');
             $table->string('descricao');
             $table->string('gerente');
             $table->timestamps();

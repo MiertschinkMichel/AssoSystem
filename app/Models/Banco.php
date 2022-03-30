@@ -12,6 +12,8 @@ class Banco extends Model
     protected $fillable = [
         'cod_febraban',
         'cod_agencia',
-        'agencia',
+        'conta',
+        'descricao',
+        'gerente'
     ];
 }
