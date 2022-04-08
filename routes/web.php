@@ -48,3 +48,12 @@ Route::put('bancos/{banco}', [App\Http\Controllers\BancoController::class, 'upda
 Route::get('bancos/{banco}/edit', [App\Http\Controllers\BancoController::class, 'edit'])->name('bancos.edit');
 Route::delete('bancos/{banco}', [App\Http\Controllers\BancoController::class, 'destroy'])->name('bancos.destroy');
 Route::post('bancos', [App\Http\Controllers\BancoController::class, 'store'])->name('bancos.store');
+
+/* Sinistros */
+Route::get('sinistros', [App\Http\Controllers\SinistroController::class, 'index'])->name('sinistros.index');
+Route::get('sinistros/create', [App\Http\Controllers\SinistroController::class, 'create'])->name('sinistros.create');
+Route::get('sinistros/{sinistro}', [App\Http\Controllers\SinistroController::class, 'show'])->name('sinistros.show');
+Route::put('sinistros/{sinistro}', [App\Http\Controllers\SinistroController::class, 'update'])->name('sinistros.update');
+Route::get('sinistros/{sinistro}/edit', [App\Http\Controllers\SinistroController::class, 'edit'])->name('sinistros.edit');
+Route::delete('sinistros/{sinistro}', [App\Http\Controllers\SinistroController::class, 'destroy'])->name('sinistros.destroy');
+Route::post('sinistros', [App\Http\Controllers\SinistroController::class, 'store'])->name('sinistros.store');

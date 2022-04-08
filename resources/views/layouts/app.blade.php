@@ -77,8 +77,8 @@
                                     Sinistros
                                   </a>
                                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="{{ '/' /* route('sinistros.create') */ }}">Criar</a></li>
-                                    <li><a class="dropdown-item" href="{{  '/' /* route('sinistros.index') */ }}">Consultar</a></li>
+                                    <li><a class="dropdown-item" href="{{route('sinistros.create')}}">Criar</a></li>
+                                    <li><a class="dropdown-item" href="{{route('sinistros.index')}}">Consultar</a></li>
                                   </ul>
                                 </li>
                               </li>
@@ -95,15 +95,35 @@
                                 </li>
                               </li>
 
-                              {{-- <li class="nav-item">
-                                <a  class="btn btn-sm btn-outline-primary" href="http://localhost:8000/associados">Configurações</a>
-                              </li> --}}
+                              <li class="nav-item">
+                                <li class="nav-item dropdown">
+                                  <a class="dropdown-toggle btn btn-sm btn-outline-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Fechamento
+                                  </a>
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="{{ '/' /* route('pagamentos.create') */ }}">Fechamento</a></li>
+                                    <li><a class="dropdown-item" href="{{  '/' /* route('pagamentos.index') */ }}">Boletos</a></li>
+                                  </ul>
+                                </li>
+                              </li>
+
+                              <li class="nav-item">
+                                <li class="nav-item dropdown">
+                                  <a class="dropdown-toggle btn btn-sm btn-outline-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Configurações
+                                  </a>
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="{{ '/' /* route('pagamentos.create') */ }}">Parâmetros de Cálculo</a></li>
+                                    <li><a class="dropdown-item" href="{{  '/' /* route('pagamentos.index') */ }}">Gerais</a></li>
+                                  </ul>
+                                </li>
+                              </li>
 
                             </ul>
-                            <form class="d-flex">
-                              <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search">
-                              <button class="btn btn-outline-success" type="submit">Busca</button>
-                        </form>
+                          {{-- <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Busca</button>
+                          </form> --}}
                       </div>
                     </div>
                   </nav>

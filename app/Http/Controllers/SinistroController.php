@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\sinistro;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoresinistroRequest;
 use App\Http\Requests\UpdatesinistroRequest;
 
@@ -15,7 +16,8 @@ class SinistroController extends Controller
      */
     public function index()
     {
-        //
+        $sinistros = Sinistro::all();
+        return \view ('sinistros.index', \compact('sinistros'));
     }
 
     /**
@@ -25,7 +27,7 @@ class SinistroController extends Controller
      */
     public function create()
     {
-        //
+        return \view ('sinistros.create', ['sinistro' => new Sinistro()]);
     }
 
     /**
@@ -36,7 +38,9 @@ class SinistroController extends Controller
      */
     public function store(StoresinistroRequest $request)
     {
-        //
+        
+        Sinistro::create($request->all());
+        return redirect()->route('sinistros.index');
     }
 
     /**

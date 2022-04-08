@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Empresa;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Http\Requests\StoreEmpresaRequest;
 use App\Http\Requests\UpdateEmpresaRequest;
 
@@ -83,6 +84,7 @@ class EmpresaController extends Controller
      */
     public function edit(Empresa $empresa)
     {
+        dd($empresa->all());
         return \view ('empresas.edit', \compact('empresa'));
     }
 

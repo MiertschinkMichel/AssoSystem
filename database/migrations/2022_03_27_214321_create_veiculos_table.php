@@ -15,7 +15,7 @@ class CreateVeiculosTable extends Migration
     {
         Schema::create('veiculos', function (Blueprint $table) {
             $table->id();
-            /* $table->foreign('associado_id')->references('id')->on('associados'); */
+            $table->foreignId('associado_id');
             $table->double('cod_fipe');
             $table->string('placa');
             $table->string('descricao');
